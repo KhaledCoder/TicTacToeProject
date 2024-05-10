@@ -16,37 +16,64 @@ public class TicTacToeProject
         game.display();
         while(true)
         {
-            if(game.isFull())
+            //_____________Player One_______________
+            play(PlayerOne,"One",'X',game);//push key player and display array
+            
+            if(isSuc(PlayerOne,'X',game))//check is player one winner or no(if winner will ended game after message)
             {
-                System.out.println("_____Game Ended without winer , please try again_____");
                 return;
             }
-            play(PlayerOne,1,'X',game);
-            if(game.isSuc('X'))
+            if(isFull(game))//check is array full or no(if full will end game)
             {
-                System.out.println("____________________"+PlayerOne+" is win____________________");
                 return;
             }
-            play(PlayerTwo,2,'O',game);
-            if(game.isSuc('O'))
+            //_____________player Two_______________
+            
+            play(PlayerTwo,"Two",'O',game);
+            if(isSuc(PlayerTwo,'O',game)) //check is player two winner or no(if winner will end game after messege)
             {
-                System.out.println("____________________"+PlayerTwo+" is win____________________");
+                return;
+            }
+            if(isFull(game))
+            {
                 return;
             }
         }
         
     }
-    public static void play(String p ,int i, char type,Game game)
+    public static boolean isFull(Game game)
     {
-        String num ;
-        if(i == 1)
-            num = "One";
-        else
-            num = "Two";
-        System.out.println("_____Player "+num+"_____-> ["+p+"]");
+        //check if array is full or no
+        if(game.isFull())
+        {
+            System.out.println("_____Game Ended without winner , please try again_____");
+            return true;
+        }
+        return false;
+    }
+    
+    public static boolean isSuc(String namePlayer , char type ,Game game)
+    {
+        //return true if player that use (type) is winner
+        if(game.isSuc(type))
+        {
+            System.out.println("____________________"+namePlayer+" is winner____________________");
+            return true;
+        }
+        //else return false
+        return false;
+    }
+    
+    public static void play(String NamePlayer ,String num, char type,Game game)
+    {
+        //print the player's number and name
+        System.out.println("_____Player "+num+"_____-> ["+NamePlayer+"]");
+        //push the player's type of key in array
         game.pushKey(type);
+        //display array
         game.display();
     }
+    
     public static String getName(String num)
     {
         Scanner in = new Scanner(System.in);
