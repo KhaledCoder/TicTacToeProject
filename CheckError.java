@@ -1,3 +1,6 @@
+/*
+ * This class contains methods to check for errors in the TicTacToe game.
+ */
 public class CheckError
 {
     
