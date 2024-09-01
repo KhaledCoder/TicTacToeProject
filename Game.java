@@ -1,4 +1,12 @@
-
+/*
+ * This class represents the game logic for 'TicTacToeProject'
+ * It resonsibilities to manage the game board(array 3*3) , player moves(With check error moves) and check who is winner(by 'CheckSuccess' class).
+ *This class has some method as
+ *-display -> to display array.
+ *-pushKey -> to push key of player(key equal 'X' or 'O') using 'insert' method
+ *-isSuc -> to check did player won after his play (by CheckSuccess class).
+ *-isFull -> to check did array fulled after play player (by CheckError class).
+*/
 import java.util.Scanner;
 
 public class Game
