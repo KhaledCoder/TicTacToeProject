@@ -1,4 +1,6 @@
-
+/*
+ * This class contains methods to check if a player has won the TicTacToe game.
+ */
 public class CheckSuccess
 {
     public static boolean isSuccess(char f , char[][] arr)
