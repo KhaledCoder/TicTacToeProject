@@ -1,3 +1,17 @@
+/*
+ * Hello, everyone ^_^ 
+ 	WELCOME IN MY PROJECT
+ *This class represents the main entry point fot the 'TicTacToeProject'.
+ *This clas handles the initialization of players, the game loop and the main game logic.
+ *The main method responsibilities of :
+ *-Gitting name of players (usig 'getName' method)
+ *-Create object from 'Game' class (named game)
+ *-Used some methods to simplify . As:
+ *--isFull -> to check is the array full or not?
+ *--isSuc -> to check did the player won after his game
+ *--play -> to print name of player and push his row and column
+ *--getName  -> to get name of player
+*/
 import java.util.Scanner;
 
 public class TicTacToeProject
